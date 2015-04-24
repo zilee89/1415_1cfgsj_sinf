@@ -41,30 +41,14 @@ case $2 in
 		 
 
 	2)
-		if [ $3 -eq 1 ]
-		then
-			lengthname=${#imgfile}
-			namefile=${imgfile:0:$lengthname-4}
-			convert "$imgfile" -resize 200x300 "$namefile".png	
-		else
-			lengthname=${#imgfile}
-			namefile=${imgfile:0:$lengthname-4}
-			convert "$imgfile" -resize 200x300 "$namefile".gif	
-			
-		fi
+		lengthname=${#imgfile}
+		namefile=${imgfile:0:$lengthname-4}
+		convert "$imgfile" -resize 200x300 "$namefile".png
 		;;
 	3)
-		if [ $3 -eq 1 ]
-		then
-			lengthname=${#imgfile}
-			namefile=${imgfile:0:$lengthname-4}
-			convert "$imgfile" -resize 300x300 "$namefile".png	
-		else
-			lengthname=${#imgfile}
-			namefile=${imgfile:0:$lengthname-4}
-			convert "$imgfile" -resize 300x300 "$namefile".gif	
-			
-		fi
+		lengthname=${#imgfile}
+		namefile=${imgfile:0:$lengthname-4}
+		convert "$imgfile" -resize 300x300 "$namefile".png
 		;;
 	*)
 		echo "wrong selection"
