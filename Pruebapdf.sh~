@@ -16,6 +16,7 @@ do
 lengthname=${#imgfile}
 	namefile=${imgfile:0:$lengthname-4}
 	convert "$imgfile" -monochrome "$namefile"1.jpg
+
 	
 done < imagefiles
 rm imagefiles
